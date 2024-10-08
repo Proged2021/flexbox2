@@ -1,0 +1,54 @@
+/* body全体の設定 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+/* コンテナをフレックスボックスで設定 */
+.container {
+    display: flex;                   /* フレックスボックスを使用 */
+    align-items: flex-start;         /* 上端を揃える */
+    justify-content: flex-start;     /* 左寄せにする */
+    width: 100%;                     /* コンテナ全体を100%の幅に */
+}
+
+/* 画像部分のスタイル */
+.item {
+    flex: 0 0 auto;                  /* 画像の幅を自動調整 */
+    margin-right: 20px;              /* 画像とテキストの間に余白を設定 */
+}
+
+.img_span {
+    display: block;                  /* インライン要素の影響を受けないように */
+}
+
+img {
+    max-width: 100%;                 /* 最大幅を親要素にフィット */
+    height: auto;                    /* アスペクト比を保持 */
+    max-height: 770px;               /* 最大高さを設定（必要に応じて調整） */
+    display: block;                  /* 画像をブロック要素として扱う */
+}
+
+/* テキスト部分のスタイル */
+.texts {
+    flex: 1;                         /* テキスト部分が残りのスペースを占有 */
+    display: flex;                   /* 内部でフレックスボックスを使用 */
+    flex-direction: column;          /* 縦方向に揃える */
+    justify-content: flex-start;     /* 上端を揃える */
+}
+
+/* 各セクションやリストの余白調整 */
+.line, .list, .作り方, .詳細１ {
+    margin-bottom: 15px;             /* 各セクション間に余白 */
+}
+
+/* 各テキスト要素のスタイル */
+.num {
+    float: right;                    /* 個数を右に寄せる */
+}
+
+.text {
+    display: inline-block;           /* インラインブロックで横並び */
+    margin-bottom: 10px;             /* テキストの間に余白 */
+}
